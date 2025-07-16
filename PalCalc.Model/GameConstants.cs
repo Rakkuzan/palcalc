@@ -58,9 +58,9 @@ namespace PalCalc.Model
             // will always inherit at least 1
             { 0, 0.0f },
             // (determined manually by gathering samples, unlike passive probabilities which were reverse engineered)
-            { 1, 0.5f },
-            { 2, 0.25f },
-            { 3, 0.25f },
+            { 1, 0.00f },
+            { 2, 0.00f },
+            { 3, 1.00f },
         };
 
         // roughly estimate time to catch a given pal
@@ -79,35 +79,35 @@ namespace PalCalc.Model
         // probability of getting N passives from parent pool
         public static readonly IReadOnlyDictionary<int, float> PassiveProbabilityDirect = new Dictionary<int, float>()
         {
-            { 4, 0.10f },
-            { 3, 0.20f },
-            { 2, 0.30f },
-            { 1, 0.40f },
+            { 4, 0.40f },
+            { 3, 0.30f },
+            { 2, 0.20f },
+            { 1, 0.10f },
             { 0, 0.0f },
         };
 
         // probability of getting N passives from parent pool without any random passives
         public static readonly IReadOnlyDictionary<int, float> PassiveProbabilityNoRandom = new Dictionary<int, float>()
         {
-            { 4, 0.10f },
-            { 3, 0.08f },
-            { 2, 0.12f },
-            { 1, 0.16f },
+            { 4, 0.4f },
+            { 3, 0.12f },
+            { 2, 0.8f },
+            { 1, 0.4f },
         };
 
         public static readonly IReadOnlyDictionary<int, float> PassiveProbabilityAtLeastN = new Dictionary<int, float>()
         {
-            { 4, 0.10f },
-            { 3, 0.30f },
-            { 2, 0.60f },
+            { 4, 0.40f },
+            { 3, 0.70f },
+            { 2, 0.90f },
             { 1, 1.00f },
         };
 
         public static readonly IReadOnlyDictionary<int, float> PassiveProbabilityNoRandomAtLeastN = new Dictionary<int, float>()
         {
-            { 4, 0.10f },
-            { 3, 0.12f },
-            { 2, 0.24f },
+            { 4, 0.16f },
+            { 3, 0.28f },
+            { 2, 0.36f },
             { 1, 0.40f },
         };
 
